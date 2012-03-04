@@ -22,6 +22,9 @@ namespace ProjectEuler
         public MainWindow()
         {
             InitializeComponent();
+
+            Question[] questions = { new Question(1, QuestionData.One()) };
+            answerGrid.ItemsSource = questions;
         }
     }
 }

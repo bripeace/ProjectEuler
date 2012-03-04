@@ -3,6 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <DataGrid AutoGenerateColumns="False" x:Name="answerGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Problem" IsReadOnly="True" Width="*" Binding="{Binding Path=QuestionNumber}" />
+                <DataGridTextColumn Header="Answer"  Width="*" Binding="{Binding Path=Answer}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
